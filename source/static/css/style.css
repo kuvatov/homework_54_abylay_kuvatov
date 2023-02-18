@@ -1,5 +1,11 @@
-
-
+nav {
+    background-color: #5bbc2e;
+}
+.product-card-image img{
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+}
 
 footer {
     background-color: #141414;

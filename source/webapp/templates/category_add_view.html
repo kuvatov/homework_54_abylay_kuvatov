@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Category Add{% endblock %}
+{% block menu %}{% endblock %}
+{% block content %}
+<h1>Add Category</h1>
+<div class="container-fluid">
+    <br>
+    <div class="edit_heading">
+        <h5>Add Category</h5>
+    </div>
+    <br>
+    <form action="{% url 'category_add_view' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                   required>
+        </div>
+        <div class="mb-3">
+            <textarea name="description" class="form-control" id="autoresizing" placeholder="Description"></textarea>
+        </div>
+        <div class="page_action">
+            <input type="submit" class="btn btn-primary" value="Add category"/>
+            <a class="btn btn-danger" href="{% url 'home' %}">Отмена</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
