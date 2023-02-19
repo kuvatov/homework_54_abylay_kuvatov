@@ -1,13 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Category Add{% endblock %}
 {% block menu %}{% endblock %}
+{% block content_title %}Add category{% endblock %}
 {% block content %}
 <div class="container-fluid">
-    <br>
-    <div class="edit_heading">
-        <h5>Add Category</h5>
-    </div>
-    <br>
     <form action="{% url 'category_add_view' %}" method="post">
         {% csrf_token %}
         <div class="mb-3">

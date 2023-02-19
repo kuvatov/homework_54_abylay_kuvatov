@@ -25,7 +25,7 @@ def categories_view(request: WSGIRequest):
     })
 
 
-def category_edit(request: WSGIRequest, pk: int):
+def category_edit_view(request: WSGIRequest, pk: int):
     category = get_object_or_404(Category, pk=pk)
     if request.method == 'GET':
         return render(request, 'category_edit_view.html', context={

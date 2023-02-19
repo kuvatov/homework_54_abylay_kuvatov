@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}Category Add{% endblock %}
+{% block title %}Product Edit{% endblock %}
 {% block menu %}{% endblock %}
-{% block content_title %}Add product{% endblock %}
+{% block content_title %}Edit product{% endblock %}
 {% block content %}
 <div class="container-fluid">
-    <form action="{% url 'product_add_view' %}" method="post">
+    <form action="{% url 'product_edit_view' product.pk %}" method="post">
         {% csrf_token %}
         <div class="mb-3">
             <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Name"
-                   required>
+                   value="{{ product.name }}" required>
         </div>
         <div class="mb-3">
             <input type="number" name="price" class="form-control" id="exampleFormControlInput1" placeholder="Price"
-                   required>
+                   value="{{ product.price }}" required>
         </div>
         <div class="mb-3">
             <input type="text" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image"
@@ -24,11 +24,11 @@
             {% endfor %}
         </select>
         <div class="mb-3">
-            <textarea name="description" class="form-control" id="autoresizing" placeholder="Description"></textarea>
+            <textarea name="description" class="form-control" id="autoresizing" placeholder="Description">{{ product.description }}</textarea>
         </div>
         <div class="page_action">
-            <input type="submit" class="btn btn-primary" value="Add product"/>
-            <a class="btn btn-danger" href="{% url 'home' %}">Отмена</a>
+            <input type="submit" class="btn btn-primary" value="Edit product"/>
+            <a class="btn btn-danger" href="{% url 'product_view' product.pk %}">Отмена</a>
         </div>
     </form>
 </div>
