@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Category Edit{% endblock %}
+{% block menu %}{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <br>
+    <div class="edit_heading">
+        <h5>Edit Category</h5>
+    </div>
+    <br>
+    <form action="{% url 'category_edit_view' category.pk %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                   value="{{ category.name }}" required>
+        </div>
+        <div class="mb-3">
+            <textarea name="description" class="form-control" id="autoresizing" placeholder="Description">{{ category.description}}</textarea>
+        </div>
+        <div class="page_action">
+            <input type="submit" class="btn btn-primary" value="Edit category"/>
+            <a class="btn btn-danger" href="{% url 'categories_view' %}">Отмена</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
