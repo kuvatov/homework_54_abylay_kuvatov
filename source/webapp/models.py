@@ -20,7 +20,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False, verbose_name='Product')
     description = models.TextField(max_length=2000, null=True, blank=True, help_text='Enter a description',
                                    verbose_name='Description')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=False, blank=False,
+    category = models.ForeignKey(to='webapp.Category', on_delete=models.CASCADE, null=False, blank=False,
                                  verbose_name='Category', related_name='categories')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Added date and time')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Updated date and time')

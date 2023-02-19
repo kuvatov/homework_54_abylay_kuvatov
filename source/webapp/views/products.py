@@ -19,20 +19,19 @@ def product_view(request: WSGIRequest, pk: int):
 
 
 def product_add_view(request: WSGIRequest):
-    product = Product.objects.all()
+    products = Product.objects.all()
     if request.method == 'GET':
         return render(request, 'product_add_view.html', context={
-            'product': product,
+            'products': products,
             'categories': Category.objects.all()
         })
-    context = {
-        'name': request.POST.get('name'),
-        'description': request.POST.get('description'),
-        'price': request.POST.get('price'),
-        'image': request.POST.get('image'),
-        'category': request.POST.get('category')
-    }
-    Product.objects.create(**context)
+    product = Product()
+    product.name = request.POST.get('name').capitalize()
+    product.description = request.POST.get('description')
+    product.price = request.POST.get('price')
+    product.image = request.POST.get('image')
+    product.category = Category.objects.get(name=request.POST.get('category'))
+    product.save()
     return redirect('product_view', pk=product.pk)
 
 

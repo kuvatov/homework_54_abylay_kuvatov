@@ -16,7 +16,7 @@
         </div>
         <div class="mb-3">
             <input type="text" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image"
-                   value="{{ product.image }}">
+                   value="/static/media/uploads/" required>
         </div>
         <select class="form-select" name="category" aria-label="Default select example" required>
             {% for category in categories %}
@@ -28,7 +28,7 @@
         </div>
         <div class="page_action">
             <input type="submit" class="btn btn-primary" value="Add product"/>
-            <a class="btn btn-danger" href="{% url 'home' %}">Отмена</a>
+            <a class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
         </div>
     </form>
 </div>

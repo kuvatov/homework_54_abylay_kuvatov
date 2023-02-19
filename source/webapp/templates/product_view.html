@@ -6,13 +6,13 @@
 <div class="card mb-5" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4 product-card-image">
-            <img src="../{{ product.image }}" class="img-fluid rounded-start" alt="{{ product.name }}">
+            <img src="{{ product.image }}" class="img-fluid rounded-start" alt="{{ product.name }}">
         </div>
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
                 <p class="card-text"><b>Category:</b> {{ product.category }}</p>
-                <p class="card-text"><b>Price:</b> {{ product.price }}</p>
+                <p class="card-text"><b>Price:</b> {{ product.price }} KZT</p>
                 {% if product.description %}
                 <p class="card-text"><b>Description:</b> {{ product.description }}</p>
                 {% else %}

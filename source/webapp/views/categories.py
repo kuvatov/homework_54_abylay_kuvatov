@@ -11,11 +11,11 @@ def category_add_view(request: WSGIRequest):
             'category': category
         })
     context = {
-        'name': request.POST.get('name'),
+        'name': request.POST.get('name').capitalize(),
         'description': request.POST.get('description')
     }
     Category.objects.create(**context)
-    return redirect('products_view')
+    return redirect('categories_view')
 
 
 def categories_view(request: WSGIRequest):
