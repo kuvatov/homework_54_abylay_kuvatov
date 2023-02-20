@@ -18,11 +18,18 @@
             <input type="text" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image"
                    value="/static/media/uploads/" required>
         </div>
+        {% if categories %}
         <select class="form-select mb-3" name="category" aria-label="Default select example" required>
             {% for category in categories %}
             <option value="{{ category }}">{{ category }}</option>
             {% endfor %}
         </select>
+        {% else %}
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1"
+                   value="There are no categories. Add a category!" readonly>
+        </div>
+        {% endif %}
         <div class="mb-3">
             <textarea name="description" class="form-control" id="autoresizing" placeholder="Description"></textarea>
         </div>

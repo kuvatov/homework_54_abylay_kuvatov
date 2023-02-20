@@ -48,6 +48,11 @@
 .page_action a, input {
     min-width: 125px;
 }
+#autoresizing {
+    display: block;
+    overflow: hidden;
+    resize: none;
+}
 footer {
     position: relative;
     bottom: 0;
@@ -59,4 +64,4 @@ footer {
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-  }
+}

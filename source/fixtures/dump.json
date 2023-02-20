@@ -1,0 +1,128 @@
+[
+{
+  "model": "webapp.category",
+  "pk": 1,
+  "fields": {
+    "name": "Food",
+    "description": "    Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth. Different species of animals have different feeding behaviours that satisfy the needs of their unique metabolisms, often evolved to fill a specific ecological niche within specific geographical contexts.\r\n\r\n    Omnivorous humans are highly adaptable and have adapted to obtain food in many different ecosystems. The majority of the food energy required is supplied by the industrial food industry, which produces food with intensive agriculture and distributes it through complex food processing and food distribution systems. This system of conventional agriculture relies heavily on fossil fuels, which means that the food and agricultural system is one of the major contributors to climate change, accountable for as much as 37% of total greenhouse gas emissions.",
+    "created_at": "2023-02-20T11:49:00.772Z",
+    "updated_at": "2023-02-20T11:49:00.772Z"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 2,
+  "fields": {
+    "name": "Clothing",
+    "description": "    Clothing (also known as clothes, garments, dress, apparel, or attire) is any item worn on the body. Typically, clothing is made of fabrics or textiles, but over time it has included garments made from animal skin and other thin sheets of materials and natural products found in the environment, put together. The wearing of clothing is mostly restricted to human beings and is a feature of all human societies. The amount and type of clothing worn depends on gender, body type, social factors, and geographic considerations. Garments cover the body, footwear covers the feet, gloves cover the hands, while hats and headgear cover the head. Eyewear and jewelry are not generally considered items of clothing, but play an important role in fashion and clothing as costume.\r\n\r\n    Clothing serves many purposes: it can serve as protection from the elements, rough surfaces, sharp stones, rash-causing plants, and insect bites, by providing a barrier between the skin and the environment. Clothing can insulate against cold or hot conditions, and it can provide a hygienic barrier, keeping infectious and toxic materials away from the body. It can protect feet from injury and discomfort or facilitate navigation in varied environments. Clothing also provides protection from ultraviolet radiation. It may be used to prevent glare or increase visual acuity in harsh environments, such as brimmed hats. Clothing is used for protection against injury in specific tasks and occupations, sports, and warfare. Fashioned with pockets, belts, or loops, clothing may provide a means to carry things while freeing the hands.",
+    "created_at": "2023-02-20T11:50:29.839Z",
+    "updated_at": "2023-02-20T11:50:29.839Z"
+  }
+},
+{
+  "model": "webapp.category",
+  "pk": 3,
+  "fields": {
+    "name": "Drink",
+    "description": "",
+    "created_at": "2023-02-20T11:51:35.468Z",
+    "updated_at": "2023-02-20T11:51:35.468Z"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Beef",
+    "description": "    In prehistoric times, humankind hunted aurochs and later domesticated them. Since that time, numerous breeds of cattle have been bred specifically for the quality or quantity of their meat. Today, beef is the third most widely consumed meat in the world, after pork and poultry. As of 2018, the United States, Brazil, and China were the largest producers of beef.\r\n\r\n    Beef can be prepared in various ways; cuts are often used for steak, which can be cooked to varying degrees of doneness, while trimmings are often ground or minced, as found in most hamburgers. Beef contains protein, iron, and vitamin B12. Along with other kinds of red meat, high consumption is associated with an increased risk of colorectal cancer and coronary heart disease, especially when processed. Beef has a high environmental impact, being a primary driver of deforestation with the highest greenhouse gas emissions of any agricultural product.",
+    "category": 1,
+    "created_at": "2023-02-20T11:57:41.312Z",
+    "updated_at": "2023-02-20T11:57:41.312Z",
+    "price": "3000.00",
+    "image": "/static/media/uploads/beef.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Beer",
+    "description": "",
+    "category": 3,
+    "created_at": "2023-02-20T12:00:49.678Z",
+    "updated_at": "2023-02-20T12:00:49.678Z",
+    "price": "500.00",
+    "image": "/static/media/uploads/beer.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "Fish",
+    "description": "Fish are aquatic, craniate, gill-bearing animals that lack limbs with digits. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. Approximately 95% of living fish species are ray-finned fish, belonging to the class Actinopterygii, with around 99% of those being teleosts.",
+    "category": 1,
+    "created_at": "2023-02-20T12:01:29.513Z",
+    "updated_at": "2023-02-20T12:01:29.513Z",
+    "price": "2000.00",
+    "image": "/static/media/uploads/fish.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "Jacket",
+    "description": "",
+    "category": 2,
+    "created_at": "2023-02-20T12:02:07.584Z",
+    "updated_at": "2023-02-20T12:02:07.584Z",
+    "price": "8000.00",
+    "image": "/static/media/uploads/jacket.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "Jeans",
+    "description": "",
+    "category": 2,
+    "created_at": "2023-02-20T12:02:33.986Z",
+    "updated_at": "2023-02-20T12:02:33.986Z",
+    "price": "6000.00",
+    "image": "/static/media/uploads/jeans.jpg"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "Shoes",
+    "description": "",
+    "category": 2,
+    "created_at": "2023-02-20T12:02:55.955Z",
+    "updated_at": "2023-02-20T12:02:55.955Z",
+    "price": "15000.00",
+    "image": "/static/media/uploads/shoes.jpg"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$BVyp3i7j7kQ6UwYKnbjMhx$jrmG/42DzS0q1bY0GfRvTMsFHJHl0HhuavnwXDu3rso=",
+    "last_login": "2023-02-17T18:17:12.282Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-17T17:49:28.526Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
