@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content_title %}Products{% endblock %}
+{% block content %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% if products %}
+    {% for product in products %}
+    <div class="col">
+        <div class="card mb-5">
+            <div class="row g-0 row-cols-md-3">
+                <div class="col-md-4 product-card-image">
+                    <a href="{% url 'product_view' product.pk %}"><img src="{{ product.image }}"
+                                                                       class="img-fluid rounded-start"
+                                                                       alt="{{ product.name }}"></a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title pb-3">{{ product.name }}</h5>
+                        <p class="card-text"><i>Category:</i>{{ product.category }}</p>
+                        <p class="card-text"><i>Price:</i>{{ product.price }} KZT</p>
+                        <a href="{% url 'product_view' product.pk %}">see more >>></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <h5 class="card-title pb-3">There are no products. Add a product!</h5>
+    {% endif %}
+</div>
+{% endblock %}

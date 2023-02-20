@@ -6,7 +6,7 @@ from webapp.models import Product, Category
 
 def products_view(request: WSGIRequest):
     products = Product.objects.all()
-    return render(request, 'home.html', context={
+    return render(request, 'products_view.html', context={
         'products': products
     })
 

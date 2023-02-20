@@ -3,24 +3,26 @@
 {% block menu %}{% endblock %}
 {% block content_title %}Product{% endblock %}
 {% block content %}
-<div class="card mb-5" style="max-width: 540px;">
+<div class="card mb-5">
     <div class="row g-0">
-        <div class="col-md-4 product-card-image">
+        <div class="col-md-4 product-details-card-image">
             <img src="{{ product.image }}" class="img-fluid rounded-start" alt="{{ product.name }}">
         </div>
         <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text"><b>Category:</b> {{ product.category }}</p>
-                <p class="card-text"><b>Price:</b> {{ product.price }} KZT</p>
+                <h5 class="card-title pb-3">{{ product.name }}</h5>
+                <p class="card-text"><i>Category:</i> {{ product.category }}</p>
+                <p class="card-text"><i>Price:</i> {{ product.price }} KZT</p>
                 {% if product.description %}
-                <p class="card-text"><b>Description:</b> {{ product.description }}</p>
+                <p class="card-text"><i>Description:</i> {{ product.description }}</p>
                 {% else %}
-                <p class="card-text"><b>Description:</b> description not added</p>
+                <p class="card-text"><i>Description:</i> description not added</p>
                 {% endif %}
-                <p class="card-text">added: {{ product.created_at }}</p>
-                <a href="{% url 'product_edit_view' product.pk %}" class="btn btn-primary">Edit</a>
-                <a href="{% url 'product_delete' product.pk %}" class="btn btn-danger">Delete</a>
+                <p class="card-text"><i>added:</i> {{ product.created_at }}</p>
+                <div class="page_action product-view-links pt-3">
+                    <a href="{% url 'product_edit_view' product.pk %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'product_delete' product.pk %}" class="btn btn-danger">Delete</a>
+                </div>
             </div>
         </div>
     </div>

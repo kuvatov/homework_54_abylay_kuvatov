@@ -18,7 +18,7 @@
             <input type="text" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image"
                    value="{{ product.image }}" accept="image/*">
         </div>
-        <select class="form-select" name="category" aria-label="Default select example" required>
+        <select class="form-select mb-3" name="category" aria-label="Default select example" required>
             {% for category in categories %}
             <option value="{{ category }}">{{ category }}</option>
             {% endfor %}

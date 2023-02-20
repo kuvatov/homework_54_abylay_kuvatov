@@ -18,7 +18,7 @@
             <input type="text" name="image" class="form-control" id="exampleFormControlInput1" placeholder="Image"
                    value="/static/media/uploads/" required>
         </div>
-        <select class="form-select" name="category" aria-label="Default select example" required>
+        <select class="form-select mb-3" name="category" aria-label="Default select example" required>
             {% for category in categories %}
             <option value="{{ category }}">{{ category }}</option>
             {% endfor %}
@@ -27,8 +27,8 @@
             <textarea name="description" class="form-control" id="autoresizing" placeholder="Description"></textarea>
         </div>
         <div class="page_action">
-            <input type="submit" class="btn btn-primary" value="Add product"/>
-            <a class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
+            <input type="submit" class="btn btn-primary btn-add-category" value="Add product"/>
+            <a class="btn btn-danger btn-add-category" href="{% url 'home' %}">Cancel</a>
         </div>
     </form>
 </div>
