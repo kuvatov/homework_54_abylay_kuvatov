@@ -20,7 +20,7 @@
         </div>
         <select class="form-select mb-3" name="category" aria-label="Default select example" required>
             {% for category in categories %}
-            <option value="{{ category }}">{{ category }}</option>
+            <option value="{{ category.pk }}">{{ category }}</option>
             {% endfor %}
         </select>
         <div class="mb-3">
